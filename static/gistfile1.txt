@@ -1,0 +1,101 @@
+  FP(Cap, VelAtlas, DesAtlas, Vin, Vnom, Vout, Pnom, a3, a2, a1, a0, FactorPerdidas, zref, Zhub, rho) {
+
+    var N = 1000;
+    var Horas = [744, 672, 744, 720, 744, 720, 744, 744, 720, 744, 720, 744]; //# horas del mes
+
+    var vel = this.range(Vin, Vout, (Vout - Vin) / (N - 1)); //# Se tienen N puntos
+    var Pfab = 0,
+      Pfab2 = 0;
+    var Pfab = [];
+    var Pfab2 = [];
+
+    for (var i = 0; i < N; i++) {
+      if (vel[i] <= Vnom) {
+        Pfab[i] = a3 * Math.pow(vel[i], 3) + a2 * Math.pow(vel[i], 2) + a1 * vel[i] + a0; //# en kW
+      } else {
+        Pfab[i] = Pnom;
+      }
+      Pfab2[i] = Math.pow(Pfab[i], 2); //# Util para calcular varianza de la potencia mensual y anual
+    }
+    var NTurbinas = Math.floor(Cap * 1000 / Math.max(Pnom));
+    var Co = Math.log(Zhub / rho) * Math.pow((Math.log(zref / rho)), -1); //# coeficiente de corrección
+    var VelMedia = [];
+    for (var i = 0; i < VelAtlas.length; i++) {
+      VelMedia[i] = VelAtlas[i] * Co;
+    };
+
+    var DesVel = [];
+    for (var i = 0; i < DesAtlas.length; i++) {
+      DesVel[i] = DesAtlas[i] * Co;
+    };
+
+    var PotMedia = [];
+    var FactorPlantaMes = [];
+    var EnergiaMed = [];
+    var VarPot = [];
+
+    for (var mes = 0; mes < 12; mes++) {
+      var zcalc = DesVel[mes] / VelMedia[mes];
+      var kprueba = this.range(0.5, 25, 0.01);
+
+      var z = [];
+      var error = [];
+      var minerror = 10000;
+
+      for (var i = 0; i < kprueba.length; i++) {
+        z[i] = Math.sqrt((gamma.gamma(1 + 2 / kprueba[i]) - Math.pow((gamma.gamma(1 + 1 / kprueba[i])), 2)) / gamma.gamma(1 + 1 / kprueba[i]));
+        error[i] = Math.abs(zcalc - z[i]);
+
+        if (error[i] < minerror) {
+          var minerror = error[i];
+          var k = kprueba[i];
+        }
+      }
+
+      var lambda = VelMedia[mes] / gamma.gamma(1 + 1 / k);
+
+      var fvel = [];
+      for (var i = 0; i < N; i++) {
+        fvel[i] = (k / lambda) * Math.pow((vel[i] / lambda), (k - 1)) * Math.exp(-Math.pow((vel[i] / lambda), k));
+      }
+
+      var acum1 = 0;
+      var acum2 = 0;
+      for (var i = 0; i < fvel.length; i++) {
+        acum1 += Pfab[i] * fvel[i];
+        acum2 += Pfab[i] * fvel[i];
+      };
+
+      PotMedia[mes] = (Vout - Vin) / (2 * N) * (2 * acum1 - fvel[1] * Pfab[1] - fvel[999] * Pfab[999]) * NTurbinas * FactorPerdidas / 1000; //# en MW
+      VarPot[mes] = (Vout - Vin) / (2 * N) * (2 * acum2 - fvel[1] * Pfab2[1] - fvel[999] * Pfab2[999]) * Math.pow((NTurbinas * FactorPerdidas / 1000), 2) - Math.pow(PotMedia[mes], 2); //# en MW ^ 2
+      EnergiaMed[mes] = PotMedia[mes] * Horas[mes]; //# Energia en MWh
+      FactorPlantaMes[mes] = EnergiaMed[mes] / (Horas[mes] * Cap);
+    }
+
+    var Energia = 0;
+    for (var i = 0; i < EnergiaMed.length; i++) {
+      Energia += EnergiaMed[i];
+    };
+
+    this.variables.push({
+      id: "eb69e426-56ab-4be7-bf2b-9601459a9226",
+      value: EnergiaMed
+    })
+
+    window.Energia = Energia
+
+    this.results.push({
+      categoryId: 167,
+      value: Energia
+    })
+    var sumatory = 0;
+
+    for (var i = 0; i < VarPot.length; i++) {
+      sumatory += Math.pow(VarPot * Horas, 2);
+    };
+
+    var FPlanta = Energia / (8760 * Cap) * 100; //# Factor de planta anual( % )
+    return FPlanta;
+    DesvEnergia = Math.sqrt(sumatory); //# Desviacion Estandar Energia Anual(MWh)
+    var DesvFactorPlanta = DesvEnergia / (8760 * Cap) * 100; //# Desviacion est.factor de planta anual( % )
+  }

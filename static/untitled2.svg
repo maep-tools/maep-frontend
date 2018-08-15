@@ -1,0 +1,30 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="230.4134897360704 197.19354838709677 181.21994134897358 181.26686217008802" width="177.22" height="177.27" id="ryXxp2tW9OM" xmlns:svgjs="http://svgjs.com/svgjs">
+    <style type="text/css">
+        @-webkit-keyframes rJSxT3K-5Oz_Animation{0%{opacity: 0.5;transform-box: fill-box;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}33.33%{opacity: 1;transform-box: fill-box;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}66.67%{opacity: 0.5;transform-box: fill-box;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}100%{opacity: 1;transform-box: fill-box;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}}@keyframes rJSxT3K-5Oz_Animation{0%{opacity: 0.5;transform-box: fill-box;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}33.33%{opacity: 1;transform-box: fill-box;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}66.67%{opacity: 0.5;transform-box: fill-box;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}100%{opacity: 1;transform-box: fill-box;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}}#ryXxp2tW9OM *{-webkit-animation-duration: 3s;animation-duration: 3s;-webkit-animation-iteration-count: infinite;animation-iteration-count: infinite;-webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);animation-timing-function: cubic-bezier(0, 0, 1, 1);}#SkLlanYZ5dG{opacity: 1;fill: #ffdd15;fill-opacity: 1;}#Sy_xantbcuz{opacity: 1;fill-opacity: 0;stroke: #000000;stroke-width: 1;stroke-opacity: 0;}#B15lThYW5_M{opacity: 1;fill: #5c5856;fill-opacity: 1;}#By3xa3tb5df{opacity: 1;fill-opacity: 0;stroke: #000000;stroke-width: 1;stroke-opacity: 0;}#B10xahYb9uM{opacity: 1;fill: #5c5856;fill-opacity: 1;}#B1gbpntWcdz{opacity: 1;fill-opacity: 0;stroke: #000000;stroke-width: 1;stroke-opacity: 0;}#BJvgT2Yb9_f{visibility: hidden;}#rJSxT3K-5Oz{-webkit-animation-name: rJSxT3K-5Oz_Animation;animation-name: rJSxT3K-5Oz_Animation;}
+    </style>
+    <g id="Hk4epntbcOG" class="">
+        <g id="rJSxT3K-5Oz">
+            <use xlink:href="#a3ldBbtJ1u" id="SkLlanYZ5dG"/>
+            <g id="BJvgT2Yb9_f">
+                <use xlink:href="#a3ldBbtJ1u" id="Sy_xantbcuz"/>
+            </g>
+        </g>
+        <g id="H1FgT2KW9dG">
+            <use xlink:href="#i8TdIl9Ecl" id="B15lThYW5_M"/>
+            <g id="rJje62Y-5OM">
+                <use xlink:href="#i8TdIl9Ecl" id="By3xa3tb5df"/>
+            </g>
+        </g>
+        <g id="HJTlpnKW5Of">
+            <use xlink:href="#b2d070HyGU" id="B10xahYb9uM"/>
+            <g id="Bk1-6ntZqdM">
+                <use xlink:href="#b2d070HyGU" id="B1gbpntWcdz"/>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <path d="M350.12 271.48L322.53 271.48L322.49 271.48L333.98 198.19L281.62 287.53L281.62 287.58L281.62 287.58L289.83 302.12L317.42 302.12L317.42 302.12L305.97 375.41L358.33 286.08L358.33 286.08L358.33 286.03L350.12 271.48Z" id="a3ldBbtJ1u"/>
+        <path d="M307.14 310.99L284.72 310.99L271.53 287.62L271.67 287.34L271.62 287.2L274.02 283.07L292.27 252.95L283.07 236.81L231.41 236.81L231.41 375.41L274.06 375.41L274.06 313.06L299.78 356.97L307.14 310.99Z" id="i8TdIl9Ecl"/>
+        <path d="M356.97 236.81L342.24 262.66L355.24 262.66L366.08 281.81L368.61 285.98L368.52 286.12L368.7 286.45L365.89 290.67L316.29 375.46L329.48 375.46L365.89 313.06L365.98 375.41L408.63 375.37L408.54 236.76L356.97 236.81Z" id="b2d070HyGU"/>
+    </defs>
+</svg>
