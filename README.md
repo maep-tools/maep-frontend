@@ -1,4 +1,4 @@
-# frontend
+# MAEP FRONTEND
 
 > A Vue.js project
 
