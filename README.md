@@ -1,3 +1,8 @@
+
+<p align="center">
+    <img width="460" height="300" src="https://maep-tools.github.io/landing-page/assets/img/theme/Vector.svg">
+</p>
+
 ### Frontend config
 You need to edit the index.html file and search the next instructions:
 Please change the path with the backend server url.
