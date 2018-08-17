@@ -1,8 +1,27 @@
-# MAEP FRONTEND
+### Frontend config
+Se debe de editar el archivo index.html y buscar las siguientes instrucciones:
 
-> A Vue.js project
+Es necesario cambiar el path base con la URL del servidor.
 
-## Build Setup
+window.pathBase = 'http://127.0.0.1'
+Es necesario poner el puerto de la aplicación del backend laravel. Por defecto será el puerto 80.
+
+window.portBaseLaravel = '8000'
+
+Si queremos probar funciones experimentales para la generación de viento debemos ejecutar el siguiente programa.
+
+window.enableWindGeneration = false
+
+Si queremos mostrar resultados con gráficas. Debemos seleccionar la siguiente variable de entorno.
+
+window.enableResults = true
+
+Si desea cambiar la ruta de la documentación del sistema debe cambiar el archivo pdf ubicado en:
+
+/static/doc.pdf
+
+
+### Build Setup
 
 ``` bash
 # install dependencies
