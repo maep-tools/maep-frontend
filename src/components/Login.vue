@@ -42,12 +42,12 @@
           </div>
           <h3 class="pt-4">
                   <span style="display: none;">MAEP</span><br/>
-                  <span style="color:white;">
-                     <vue-typer style="color:white;" text='Modelo de Análisis Eléctrico y Planeamiento'></vue-typer>
+                  <span style="color:black;">
+                     <vue-typer style="color:black;" text='Modelo de Análisis Eléctrico y Planeamiento'></vue-typer>
                   </span>
                </h3>
           <p class="mt-4"
-             style="color:white;">
+             style="color:black;">
                 Herramienta para el planeamiento de la operación de sistemas hidrotérmicos.
           </p>
           <div class="pt-1">
@@ -693,7 +693,7 @@ export default {
       })
     },
     displayPopUp () {
-      window.open("/static/doc.pdf",'Documentación','height=1000,width=1500');
+      window.open("https://github.com/maep-tools/maep-documentation",'Documentación','height=1000,width=1500');
 
     },
     hideLoading() {
