@@ -31,7 +31,7 @@
      font-family: 'Raleway', sans-serif;
 }
  .bg-light {
-     background: #dde0e3 !important;
+     background: #e5eaef !important;
      .background-image:url('/static/gradient.svg') !important;
      -webkit-background-size: cover;
      -moz-background-size: cover;
