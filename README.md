@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img width="460" height="300" src="https://maep-tools.github.io/landing-page/assets/img/theme/Vector.svg">
+    <img width="230" height="150" src="https://maep-tools.github.io/interface-landingpage/assets/img/theme/Vector.svg">
 </p>
 
 ### Frontend config
