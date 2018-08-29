@@ -3,6 +3,9 @@
     <img width="86.5" height="113.7" src="https://maep-tools.github.io/interface-landingpage/assets/img/theme/Recurso 16@2x-8.png">
 </p>
 
+MAEP is a collection of tools for operation planning of power systems.  
+MAEP web interface is a tool for manage the optimization models of MAEP. This tool is an open-source application of free access through a web environment.
+
 ### Frontend config
 You need to edit the index.html file and search the next instructions:
 Please change the path with the backend server url.
