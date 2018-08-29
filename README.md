@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img width="230" height="150" src="https://maep-tools.github.io/interface-landingpage/assets/img/theme/Vector.svg">
+    <img width="86.5" height="113.7" src="https://maep-tools.github.io/interface-landingpage/assets/img/theme/Recurso 16@2x-8.png">
 </p>
 
 ### Frontend config
@@ -44,54 +44,6 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-### Screenshots
-#### Dashboard
-You can see the status of the model in this page. The users can create models in the application only using a web browser.
-Is perfect if you are a basic user. 
-![Dashboard](https://raw.githubusercontent.com/maep-tools/maep-documentation/master/screenshots/dashboard.png)
-
-
-#### User management
-The administrator can see the users registered in the system. You can configure a lot of roles.
-![Dashboard](https://raw.githubusercontent.com/maep-tools/maep-documentation/master/screenshots/users.png)
-
-
-#### Excel Upload
-You can upload the inputs of MAEP from the UI and the system send you a email when the process finish.
-![Excel](https://raw.githubusercontent.com/maep-tools/maep-documentation/master/screenshots/excel.png)
-
-
-#### User Interface for learn the inputs of MAEP
-We design a custom user interface for learn how to use MAEP
-![Dashboard](https://raw.githubusercontent.com/maep-tools/maep-documentation/master/screenshots/demand.png)
-
-hundreds of configuration variables categorized.
-![Dashboard](https://raw.githubusercontent.com/maep-tools/maep-documentation/master/screenshots/form.png)
-
-
-#### Email notification
-The system send a notification to the user email address when the model is processed.
-![Dashboard](https://raw.githubusercontent.com/maep-tools/maep-documentation/master/screenshots/email.png)
-
-#### Queue system
-You can close the window. And the model will finish in the background.
-![Dashboard](https://raw.githubusercontent.com/maep-tools/maep-documentation/master/screenshots/loading.png)
-
-Check your email address later.
-![Dashboard](https://raw.githubusercontent.com/maep-tools/maep-documentation/master/screenshots/queue1.png)
-
-#### Input Validation Screen
-You can see if your model is ready to run.
-![Dashboard](https://raw.githubusercontent.com/maep-tools/maep-documentation/master/screenshots/validation.png)
-
-#### Results
-You can configure the results page. Maybe you want to see a list of charts.
-![Results1](https://raw.githubusercontent.com/maep-tools/maep-documentation/master/screenshots/results.png)
-
-Maybe you only need serve the output. 
-![Results2](https://raw.githubusercontent.com/maep-tools/maep-documentation/master/screenshots/results2.png)
-
 
 
 ### License
